@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgronomyNet - Get details from user</title>
+    <link rel="website icon" type="png"  href="images/logofinal.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/sales.css">
+    <link rel="stylesheet" href="/nav.css">
+
+</head>
+
+<body>
+
+    <%- include('./partials/nav.ejs') %>    
+
+    <div class="detailscont">
+
+
+        <div class="detailsimg">
+
+            <img src="/images/apple.jpg">
+
+        </div>
+
+
+
+        <div class="producedetails">
+
+
+            <h1 style="color: greenyellow;">Fresh Apple</h1>
+
+            <h1>Produce Information</h1>
+
+            <div class="additionalinfo">
+
+
+                <div class="infoinrow">
+
+                    <p class="greenlet">Diet Type</p>
+                    <p class="userlet">Vegetarian</p>
+
+                </div>
+
+
+
+                <div class="infoinrow">
+
+                    <p class="greenlet">Speciality</p>
+                    <p class="userlet">Natural</p>
+
+                </div>
+
+
+
+                <div class="infoinrow">
+
+                    <p class="greenlet">Manufacture</p>
+                    <p class="userlet">Natural</p>
+
+                </div>
+
+
+    
+                <div class="infoinrow">
+
+                    <p class="greenlet">Item From</p>
+                    <p class="userlet">Theni</p>
+
+                </div>
+
+
+    
+                <div class="infoinrow">
+
+                    <p class="greenlet">Brand</p>
+                    <p class="userlet">Fresh</p>
+
+                </div>
+
+
+    
+                <div class="infoinrow">
+
+                    <p class="greenlet">Item Weight</p>
+                    <p class="userlet">700 Grams</p>
+
+                </div>
+
+    
+                <div class="infoinrow">
+
+                    <p class="greenlet">Number of Items</p>
+                    <p class="userlet">1</p>
+
+                </div>
+
+    
+                <hr>
+    
+    
+            </div>
+
+
+    
+            <div class="aboutinfo">
+
+                <h1>About This Item</h1>
+                <p>
+                    Experience the irresistible charm of our freshly harvested apples, a symphony of 
+                    flavor and crunch delivered straight from our orchard to your doorstep. Each juicy bite
+                    encapsulates the essence of sun-soaked mornings and dew-kissed evenings, promising a sweet 
+                    escape into nature's finest. Elevate your snacking with our meticulously grown apples, 
+                    and let every moment be a crisp, delightful celebration of goodness. 
+                </p>
+                <div class="rating-section">
+                    <h1>Rate this Product</h1>
+                    <div class="rating-stars-container">
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                        <span class="fa fa-star unchecked"></span>
+                    </div>
+                </div>
+                <hr>
+
+
+            </div>
+
+
+
+    
+            <div class="directinfo">
+
+                <h1>Direct Contact with Seller</h1>
+
+              
+
+                <a href="/chatpage3" style="text-decoration: none; color: #000; margin-bottom: 10px;">
+                    <div class="userinfo1">
+                        <img src="/images/seller profile.jpg">
+                        <p>Manjubashini</p>
+                    </div>
+                </a>
+
+
+                <a  style="background-color:rgb(0,100,0); color:#fff; font-weight:bold; text-decoration:none; padding:8px; font-size:larger; margin-top: 10px;" href="#addtocart">Buy Now</a>
+
+            </div>
+
+            
+        </div>
+
+        
+
+    </div>
+
+
+
+
+    <div class="addtocart" id="addtocart">
+
+
+        <div class="center-content">
+            <h1>Enter Your details for Deliver</h1>
+        </div>
+
+
+        <div class="form-container">
+
+
+            <form action="#" method="#" class="cartuserinfo">
+                
+
+                <div class="form-column">
+                    <label for="title">Enter Your Name</label>
+                    <input for="text" name="cartusername">
+
+                    <label for="title">Enter Your Phone Number</label>
+                    <input for="number" name="cartusernumber">
+
+                    <label for="title">Enter Your Address</label>
+                    <input for="text" name="cartuseraddress">
+                </div>
+                
+                <div class="form-column">
+                    <label for="title">Enter Any Land Mark near your Address</label>
+                    <input for="title" name="cartuserlandmark">
+
+                    <label for="title">Enter your UserName in AgronomyNet for Direct Contact for Tracking Info</label>
+                    <input for="text" name="cartuserid">
+                </div>
+
+                <div class="form-column">
+                    <label for="cartquantity">You have chosen quantity 1</label>
+                    <img src="/images/apple.jpg" alt="Product Image" class="large-image">
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="center-content">
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+
+
+        <div class="overlay" id="overlay">
+
+            <div class="message-box">
+                <p>Your order is submitted directely to the seller. The seller will contact you soon !!</p>
+            </div>
+
+            <span class="close-btn" id="closeBtn">X</span>
+        </div>
+
+    </div>
+
+
+    <script src="/script/overlay.js"></script>
+
+
+      
+
+    
+</body>
+</html>

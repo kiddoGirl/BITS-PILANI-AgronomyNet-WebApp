@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgronomyNet - Crop Health and Yield</title>
+    <link rel="website icon" type="png"  href="/images/logofinal.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/crop.css">
+
+
+</head>
+
+<body>
+
+    <%- include('./partials/nav.ejs') %> 
+
+
+    <form id="cropForm">
+
+
+        <h2 class="form-heading">Crop Health and Yield Assessment</h2>
+
+
+        <div class="form-column">
+
+
+
+            <label for="fertilizerPestControl">Fertilizer and Pest Control</label>
+            <textarea id="fertilizerPestControl" name="fertilizerPestControl" rows="4" required></textarea>
+
+
+            <label for="cropSymptoms">Crop Symptoms</label>
+            <textarea id="cropSymptoms" name="cropSymptoms" rows="4" required></textarea>
+
+
+            <label for="environmentalConditions">Environmental Conditions</label>
+            <textarea id="environmentalConditions" name="environmentalConditions" rows="4" required></textarea>
+
+
+            <label for="cropType">Crop Type</label>
+            <input type="text" id="cropType" name="cropType" required>
+
+
+            <label for="weatherData">Weather Data</label>
+            <textarea id="weatherData" name="weatherData" rows="4" required></textarea>
+
+           
+
+           
+        </div>
+
+
+
+        <div class="form-column">
+
+
+
+            <label for="soilInfo">Soil Information</label>
+            <textarea id="soilInfo" name="soilInfo" rows="4" required></textarea>
+
+         
+            <label for="irrigation">Irrigation</label>
+            <textarea id="irrigation" name="irrigation" rows="4" required></textarea>
+
+          
+
+            <label for="pestDiseaseBehavior">Pest or Disease Behavior</label>
+            <textarea id="pestDiseaseBehavior" name="pestDiseaseBehavior" rows="4" required></textarea>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+
+
+            <label for="plantingDate">Planting Date</label>
+            <input type="date" id="plantingDate" name="plantingDate" required>
+
+           
+           
+        </div>
+
+
+        <button type="submit">Submit</button>
+
+        
+
+
+    </form>
+
+
+    <div id="cropResult"></div>
+
+
+   
+
+
+
+    <script src="/script/crop.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+

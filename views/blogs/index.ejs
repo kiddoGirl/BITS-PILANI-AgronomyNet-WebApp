@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgronomyNet - KnowledgeSharing</title>
+    <link rel="website icon" type="png"  href="/images/logofinal.jpg">
+    <link rel="stylesheet" href="/kstyles.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <%- include('../partials/nav.ejs') %>  
+
+
+    <section class="home-section">
+
+        <img src="/images/final home img for ks.jpg" alt="Home Image" class="home-bg">
+
+            <div class="overlay"></div>
+
+            <div class="home-content">
+
+                <h1>Welcome to Our Knowledge Exchange Platform.</h1>
+                <p>Engage, Share, and Discover</p>
+                <a href="blogs/createblog" class="home-button">Explore</a>
+
+            </div>
+
+            <div class="bottom-row">
+
+                <div class="bottom-item">
+
+                    <img src="/images/plant science.jpg" alt="Image 1">
+                    <p>Cultivation and Plant Sciences</p>
+
+                </div>
+
+                <div class="bottom-item">
+
+                    <img src="/images/animal husbandary.jpg" alt="Image 2">
+                    <p>Livestock and Animal Husbandry</p>
+
+                </div>
+
+                <div class="bottom-item">
+
+                    <img src="/images/env stewardship.jpg" alt="Image 3">
+                    <p>Sustainable Practices and Environmental Stewardship</p>
+
+                </div>
+
+                <div class="bottom-item">
+
+                    <img src="/images/business.jpg" alt="Image 4">
+                    <p>Business and Community in Agriculture</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <div class="end-section">
+
+            <div class="end-content">
+
+                <div class="end-inner">
+
+                    <p>Empower the Green Thumb Within: Craft Your Agriculture Blog</p>
+                    <a href="/blogs/createblog"style="background-color:rgb(38, 175, 38); width:200px;" class="home-button">Create Now</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="heading-container">
+
+            <h1 class="heading">
+
+                Explore, Learn, Thrive: <span>Embracing Green Horizons</span>
+
+            </h1>
+
+        </div>
+
+
+
+        <div class="card-container">
+
+            <div class="card">
+
+                <img src="/images/adaption.jpg" alt="Image 1">
+                <p>Climate Resilience and Adaptation</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="/images/equipment.jpg" alt="Image 1">
+                <p>Farm Equipment and Technology</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="/images/research.jpg" alt="Image 1">
+                <p>Agricultural Research and Innovations</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="/images/personal.jpg" alt="Image 1">
+                <p>Personal Farming Experiences</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="/images/cooking receipie.jpg" alt="Image 1">
+                <p>Cooking and Recipes</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="/images/edu.jpg" alt="Image 1">
+                <p>Educational Resources and Workshops</p>
+
+            </div>
+        
+            
+        </div>
+
+
+
+
+        <section class="featured-section">
+
+            <h2 class="featured-heading">Share Your Expertise</h2>
+
+            <div class="featured-content">
+
+                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                <p>Join the global agriculture community and contribute to the wealth of knowledge in the field. Whether you're a seasoned farmer, researcher, or enthusiast, share your insights, techniques, and experiences to benefit fellow agriculturists worldwide.</p>
+
+            </div>
+
+        </section>
+
+
+
+       
+        <div class="heading-container">
+
+            <h1 id="all-blogs" class="heading">All Blogs</h1>
+
+        </div>
+
+
+
+
+        <div class="three-container">
+
+        
+            <% if (blogs.length > 0) { %>
+
+                <div class="row">
+                    
+                    <% blogs.forEach((blog, index) => { %>
+
+                        <div class="border-card" data-doc="<%= blog._id %>">
+
+                                <a href="/chatpage" class="blog-profile">
+                                    <img src="/images/seller profile.jpg" alt="User Profile" class="profile-pic">
+                                    <span class="user-name">Manjubashini</span>
+                                </a>
+                    
+
+                                <img src="data:blog/<%=blog.img.contentType%>;base64,<%=blog.img.data.toString('base64')%>" alt="blog-img">
+
+                                <h3 style="margin: 10px 0; font-size: 20px; color: rgb(0,100,0);"><%= blog.title %></h3>
+                                <p style=" margin: 0; font-size: 14px; color: #000; line-height: 23px;"><%= blog.snippet %></p>
+
+                                <a href="/blogs/<%= blog._id %>"
+
+                                    style="text-decoration: none; width: 150px; background: rgb(0,100,0); color: #fff; border-radius: 10px; padding: 10px; font-size: medium; font-weight: bolder; text-align: center; display: block; transition: opacity 0.3s, background-color 0.3s, color 0.3s; margin-top: 10px;"
+                                    onmouseover="this.style.opacity='0.8'; this.style.backgroundColor='#000000'; this.style.color='greenyellow';"
+                                    onmouseout="this.style.opacity='1'; this.style.backgroundColor='rgb(0,100,0)'; this.style.color='#fff';">
+                                    Read More
+
+                                </a>
+                                
+
+                        </div>
+                        
+            <% if ((index + 1) % 3 === 0) { %>
+                        </div><div class="row">
+                <% } %>
+                <% }) %>
+                </div>
+
+            <% } else { %>
+
+            <p>There are no blogs to display...</p>
+
+        <% } %>
+
+    </div>
+
+
+
+
+
+
+    <section class="qa-section">
+
+
+        <h2 class="qa-heading" style="color: rgb(0,100,0); text-align: center;">Ask Your Questions About Agriculture</h2>
+
+
+        <div class="qa-container">
+
+
+
+            <div class="qa-column">
+
+                <img src="/images/how to crop yield.jpg" alt="Image 1" class="qa-image">
+                <p class="qa-question">How to improve crop yield?</p>
+                <p class="qa-answer">How can I protect my garden from deer?</p>
+
+            </div>
+
+            <div class="qa-column">
+
+                <img src="/images/answer.png" alt="Image 2" class="qa-image">
+                <p class="qa-question">To improve crop yield, focus on proper soil preparation, including nutrient-rich soil and adequate drainage.</p>
+                <p class="qa-answer"> Additionally, practice crop rotation and select disease-resistant varieties for healthier plants and higher yields.</p>
+
+            </div>
+
+           
+        </div>
+
+       
+
+        <div class="qa-user-input">
+
+            <div class="input-container">
+
+                <textarea id="question-textarea" placeholder="Ask your question here..."></textarea>
+
+                <label for="image-upload" class="image-upload-label">
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    Choose an image
+                </label>
+
+            </div>
+
+            <button onclick="submitQuestion()" style="font-weight:bold">Submit</button>
+
+        </div>
+
+    </section>
+
+
+    
+
+
+</body>
+
+
+
+
+    <script>
+
+        
+
+        function submitQuestion() {
+            const questionText = document.querySelector('#question-textarea').value;
+            const selectedFile = document.querySelector('#image-upload').files[0];
+
+
+            const userMessageContainer = document.createElement('div');
+            userMessageContainer.classList.add('qa-column', 'user-message');
+
+
+            const userQuestionAnswer = document.createElement('p');
+            userQuestionAnswer.classList.add('qa-question-answer', 'user-question-answer');
+            userQuestionAnswer.textContent = `${questionText}`; 
+
+   
+            const userImage = document.createElement('img');
+            userImage.classList.add('qa-image', 'user-image');
+
+
+            userMessageContainer.appendChild(userQuestionAnswer);
+            userMessageContainer.appendChild(userImage);
+
+  
+            const qaSection = document.querySelector('.qa-section');
+            qaSection.appendChild(userMessageContainer);
+
+
+            document.querySelector('#question-textarea').value = '';
+            document.querySelector('#image-upload').value = '';
+
+            
+            if (selectedFile) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    userImage.src = e.target.result;
+                };
+                reader.readAsDataURL(selectedFile);
+            }
+
+         
+            console.log('Question:', questionText);
+        }
+
+
+        
+    </script>
+
+
+</html>
+
