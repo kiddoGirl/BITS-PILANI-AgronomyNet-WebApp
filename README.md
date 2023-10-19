@@ -28,7 +28,7 @@ This intelligent system efficiently manages agricultural inquiries, providing in
 
 ### AgriMarket Insights: Fresh News & Articles
 
-This service displays daily agriculture and marketing news as articles using a news API. Clicking an article provides more details about the news.
+We provide daily agriculture and marketing news using a news API, and clicking on an article reveals in-depth insights. Our "Weather and Market Updates" offer real-time weather and market data, empowering you to make informed decisions, optimize crop yield, and navigate uncertainties. 
 
 ![ns](https://github.com/kiddoGirl/BITS-PILANI-AgronomyNet-WebApp/assets/103051896/4868cfde-9ff7-4ed0-9f21-1b0fcef52664)
 
