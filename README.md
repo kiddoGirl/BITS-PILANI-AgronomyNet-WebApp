@@ -68,6 +68,9 @@ Enjoy a user-friendly experience with our website's multi-language support, allo
 
 ![Screenshot (26)](https://github.com/kiddoGirl/BITS-PILANI-AgronomyNet-WebApp/assets/103051896/439a954d-3f9e-4eec-a1a9-299dba14f511)
 
+![translate](https://github.com/kiddoGirl/BITS-PILANI-AgronomyNet-WebApp/assets/103051896/f02d3eb5-dddd-4788-81cd-ed6ed315da85)
+
+
 ### Find Business Partner
 
 Explore agri blogs, connecting business professionals to potential partners and fostering business growth through direct communication.
